@@ -1,0 +1,28 @@
+#joe{
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 650px 750px;
+    border: solid black 5px;
+
+
+}
+#p{
+    padding: 10px;
+    margin: 20px;
+}
+#cheese{
+    padding: 20px;
+   
+}
+#bob{
+    padding: 20px;
+}
+#jim{
+    padding: 20px;
+}
+#img{
+    margin: 10;
+}

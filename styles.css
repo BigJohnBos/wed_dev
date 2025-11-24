@@ -20,3 +20,6 @@ img{
     align-items: center;
     flex-wrap: wrap;
 }
+#hidden{
+    display: none;
+}

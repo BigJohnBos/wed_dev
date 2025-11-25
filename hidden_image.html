@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1{
+            text-align: center;
+        }
+        img{
+            display: none;
+        }
+    </style>
+    <title>Document</title>
+    <script>
+    showing = "none"
+    function show(){
+    if (showing == "none")
+    
+        document.getElementById("bob").style.display = "block"
+        showing = "block"
+        document.getElementById("hidden").style.display = "none"
+    }
+  
+</script>
+</head>
+<body>
+    <h1>LEGOS</h1>
+   
+
+    <p>Do you like Legos?  I do!  Many people love legos, child and adult. legos are a great way to <br>use your creativity and build whatever you want. From lego sets made spacifically for adults, <br> to duplo, there are sets for everyone.</p>
+    <h5 id="hidden" onmouseover="show()">Hover here for image</h5>
+     <img id="bob" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/1200px-LEGO_logo.svg.png" height="100px">
+    <p>
+        A lot of people think that legos are only for little kids, but I strongly dissagree.  Legos are a <br> way that you can build whatever you want.  My personal favorite kind of legos are technic.  I <br> like freebuilding and making machines that work.  Below are some of the different lego <br> catagories/styles.
+    </p>
+    <l>
+        <li>Technic</li>
+        <li>Creator</li>
+        <li>City</li>
+    </l>
+</body>
+</html>

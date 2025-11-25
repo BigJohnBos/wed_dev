@@ -47,12 +47,41 @@
                 background-color: gray;
                 color:rgb(197, 197, 35);
                 border:black solid 0.5px;
+                display: none;
             }
             #jim{
                 border: black solid 0.5px;
+                display: none;
             }
             
         </style>
+        <script>
+                showing = "none"
+    function show(){
+    if (showing == "none"){
+    
+        document.getElementById("jim").style.display = "block"
+        document.getElementById("bob").style.display = "block"
+        showing = "block"
+        document.getElementById("button").innerHTML = "Show less"
+    }else{
+        document.getElementById("jim").style.display = "none"
+        document.getElementById("bob").style.display = "none"
+        showing = "none"
+        document.getElementById("button").innerHTML = "Show more"
+    }
+        if (showing == "none"){
+    
+        
+        showing = "block"
+        document.getElementById("button").innerHTML = "Show less"
+    }else{
+        
+        showing = "none"
+        document.getElementById("button").innerHTML = "Show more"
+    }
+}
+        </script>
     </head>
     <body>
         <div id="joe">
@@ -88,8 +117,9 @@
             <li><a href="https://www.amazon.com/Bachmann-Chief-Ready-Electric-Train/dp/B004NHDW1K/ref=sr_1_3?crid=UTN2CPI5P46T&dib=eyJ2IjoiMSJ9.dKsTK6uihPLYx48zhq_TAoWTSjLcg2WcYdIaW7eFs3ngltI3pxmwHMIx4249JD4UXLn46E_r7hYQp3n6SjrW9-sjCqLo3NXK81E_B3CFNf_HYWgDM2fC2ctKXGxo_3zuvFzHRSWXi63ir8HUcyEoraFxxEURIAoFYhfZ8h_GWLAfRy4gTtKwKHlFZTLX4I5e9CIYzxBu3Js8VC9V9u0YyCd4ubZWSa1fgsTQPcyVhh1mosF6nBKNUGvxkXTcL40EFWYHM4g98mdX61geSfTXRXr60BD6awkb96rifsTkW28.HdwwzEMZvY2eAXchXE-z7HyNGuH5avIAlfXIDTTFSkk&dib_tag=se&keywords=ho+scale+starter+sets&qid=1763154871&sprefix=ho+scale+starter+sets%2Caps%2C178&sr=8-3" target="_blank">Rail Chief</a></li>
             <img id="e" src="https://m.media-amazon.com/images/I/61cAE+KHtfL._AC_SX679_.jpg" />
         </ul>
+        
     </div>
-    
+    <button onmousedown="show()">Show more</button>
     </div>
     </body>
 </html>

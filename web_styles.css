@@ -4,7 +4,7 @@
   font-style: normal;
 display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 650px 750px;
+    grid-template-rows: 650px 750px 500px 500px;
     border: solid black 5px;
 
 

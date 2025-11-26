@@ -63,24 +63,24 @@
         document.getElementById("jim").style.display = "block"
         document.getElementById("bob").style.display = "block"
         showing = "block"
-        document.getElementById("button").innerHTML = "Show less"
+        document.getElementById("bill").innerHTML = "Show less"
     }else{
         document.getElementById("jim").style.display = "none"
         document.getElementById("bob").style.display = "none"
         showing = "none"
-        document.getElementById("button").innerHTML = "Show more"
-    }
-        if (showing == "none"){
-    
-        
-        showing = "block"
-        document.getElementById("button").innerHTML = "Show less"
-    }else{
-        
-        showing = "none"
-        document.getElementById("button").innerHTML = "Show more"
+        document.getElementById("bill").innerHTML = "Show more"
     }
 }
+
+        index = 0
+    images = ["https://www.irm.org/wp-content/uploads/2021/11/modelrailroad1-300x229.jpg", "https://i.ytimg.com/vi/eDVtlWCt_BQ/sddefault.jpg"]
+    function change(){
+        document.getElementById("first").src = images[index]
+        index += 1
+        if (index >= images.length){
+            index = 0
+        }
+    }
         </script>
     </head>
     <body>
@@ -88,7 +88,7 @@
         <div id="cheese">
     <h1>Model railroad know how</h1>
     <br>
-    <img id="first" src="https://www.irm.org/wp-content/uploads/2021/11/modelrailroad1-300x229.jpg" />
+    <img id="first" onmouseover="change()" src="https://www.irm.org/wp-content/uploads/2021/11/modelrailroad1-300x229.jpg" />
     <br>
     <br>
     
@@ -119,7 +119,7 @@
         </ul>
         
     </div>
-    <button onmousedown="show()">Show more</button>
+    <button id="bill" onmousedown="show()">Show more</button>
     </div>
     </body>
 </html>

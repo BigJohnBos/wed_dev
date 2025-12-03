@@ -1,7 +1,8 @@
-password= input("Password?")
+
 bob = 1
 while True:
-    if password==12345:
+    password = input("Password?")
+    if password == 12345:
         print("correct")
         break
     else:

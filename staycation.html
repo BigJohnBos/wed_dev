@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Story+Script&display=swap" rel="stylesheet">
+
     <style>
         #cheese{
             padding: 10px;
@@ -11,12 +15,14 @@
             grid-template-columns: 1fr 1fr;
             background-color: antiquewhite;
             border: 1px solid black;
+            margin: 0px;
         }
         #pic{
             margin: 10px;
         }
         h1{
             text-align: center;
+            color: red;
         }
         #bob{
             align-self: center;
@@ -29,7 +35,52 @@
             #boll{
                 height: 200px;
             }
+            body{
+                color: blue;
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: rgb(2, 238, 255);
+}
+
+        #pig{
+
+            background-color: antiquewhite;
+            display:none;
+        }
+        #piggy{
+            display: none;
+        }
+        #billy{
+            height: 300px;
+            width: auto;
+        }
     </style>
+    <script>
+        showing = "none"
+    function show(){
+    if (showing == "none"){
+    
+        document.getElementById("pig").style.display = "block"
+        document.getElementById("piggy").style.display = "block"
+        showing = "block"
+        document.getElementById("button").innerHTML = "Show less"
+    }else{
+        document.getElementById("pig").style.display = "none"
+        document.getElementById("piggy").style.display = "none"
+        showing = "none"
+        document.getElementById("button").innerHTML = "Show more"
+    }}
+        index = 0
+    images = ["https://img.ksl.com/slc/2565/256517/25651747.jpg?filter=ksl/fullsize", "https://kjzz.com/resources/media/511b786d-59bf-4891-87ff-16c2b01dd8d7-large16x9_lagoon.JPG?1615490504933s"]
+    function change(){
+        document.getElementById("billy").src = images[index]
+        index += 1
+        if (index >= images.length){
+            index = 0
+        }
+    }
+    </script>
 </head>
 <body>
     <h1>LAGOON</h1>
@@ -43,14 +94,24 @@
                 <li>Big park</li>
                 <li>Fun rides</li>
                 <li>Large variety of rides</li>
+                <li>Free rides once you are in</li>
             </ul>
         </div>
     <div id="bob">
             <img id="pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCC_jqjE8qHBYk6Xl2r6hjhqu9wrsHXHnZLg&s">
-            <img id="boll" src="https://kjzz.com/resources/media/511b786d-59bf-4891-87ff-16c2b01dd8d7-large16x9_lagoon.JPG?1615490504933s">
+            <br>
+            <img id="boll"  src="https://kjzz.com/resources/media/511b786d-59bf-4891-87ff-16c2b01dd8d7-large16x9_lagoon.JPG?1615490504933s">
         </div>
         
+            <div id="pig">
+        <p>One of the best rides there is Cannibal.  It is a very fast roller coaster with a really big drop.  Even though most times it has a long wait, it is worth it.</p>
         
     </div>
+    <div id="piggy">
+        <img id="billy" onmouseover="change()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp7RRzT_l2PxYSupSMtwWNl2uoY_qwvb_xSg&s">
+    </div>
+    </div>
+    <button id="button" onclick="show()">Show more</button>
+
 </body>
 </html>
